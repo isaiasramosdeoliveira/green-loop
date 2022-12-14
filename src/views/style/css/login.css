@@ -1,0 +1,13 @@
+#login {
+  background-color: #464646;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  background-color: #007A7E;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=login.css.map */

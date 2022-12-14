@@ -1,0 +1,17 @@
+@keyframes plants {
+    from{
+        transform: translate(0px, -30px);
+    }
+    to{
+        transform: none;
+    }
+}
+
+@mixin animationPlants($value) {
+    @if($value == true) {
+        animation-name: plants;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
