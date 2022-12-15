@@ -1,27 +1,45 @@
-// import 'regenerator-runtime/runtime';
-// import 'core-js/stable';
+import {
+  login, plans, aboutUs, cart, contacts, loader,
+} from '../../pages/pages';
 
+const display = document.querySelector('#contents');
+const menu = document.querySelector('#menu');
+
+const time = (section) => {
+  setTimeout(() => {
+    loaderPage(section);
+  });
+  // display.innerHTML = loader;
+};
+const loaderPage = (section) => {
+  display.innerHTML = section;
+};
 // Actions of buttons
-document.addEventListener('click', (e) => {
+menu.addEventListener('click', (e) => {
   e.preventDefault();
-  let url = '';
   const action = e.target;
-  if (action.tagName.toLowerCase() === 'a') {
-    url = action.href;
-    loadPage(url);
+  const id = action.classList;
+  switch (id[0]) {
+    case 'login':
+      time(login);
+      break;
+    case 'plans':
+      time(plans);
+      break;
+    case 'aboutUs':
+      time(aboutUs);
+      break;
+    case 'cart':
+      time(cart);
+      break;
+    case 'contacts': {
+      time(contacts);
+    }
   }
 });
-async function loadPage(url) {
-  const page = await fetch(url);
-  const pageContent = await page.text();
-  const display = document.querySelector('#contents');
-  display.innerHTML = pageContent;
-}
-
 // function of button mobile
 document.addEventListener('click', (e) => {
   const action = e.target;
-  const menu = document.querySelector('#menu');
   if ((action.classList.contains('fa-list'))) {
     menu.style.height = '97vh';
     action.classList = 'fa-solid fa-xmark';
@@ -35,3 +53,11 @@ document.addEventListener('click', (e) => {
     menu.style.height = '50px';
   }
 });
+// Animações de Soroll
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '50px',
+  duration: 2000,
+});
+sr.reveal('.hidden', { delay: 200 });
+sr.reveal('.hidden', { interval: 200 });

@@ -1,9 +1,54 @@
+@charset "UTF-8";
 @keyframes plants {
   from {
     transform: translate(0px, -30px);
   }
   to {
     transform: none;
+  }
+}
+@font-face {
+  font-family: "chariss";
+  src: url(../fonts/CharisSIL-Italic.ttf);
+}
+@font-face {
+  font-family: "nunito";
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "fugaz";
+  src: url(../fonts/Fugaz_One/FugazOne-Regular.ttf);
+}
+@font-face {
+  font-family: "great";
+  src: url(../fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
+@keyframes jump {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes move {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 1;
   }
 }
 * {
@@ -13,9 +58,22 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.aviso {
+  padding: 20px;
+  font-size: 20px;
+}
+.aviso i {
+  color: rgb(221, 179, 39);
+}
+
 body {
+  font-family: "nunito", Courier, monospace;
+  overflow-x: hidden;
   position: relative;
-  background-color: #191919;
+  background-color: rgb(18, 17, 17);
+}
+body .hidden {
+  visibility: hidden;
 }
 body::-webkit-scrollbar {
   width: 10px;
@@ -28,12 +86,12 @@ body::-webkit-scrollbar-thumb {
 body main {
   display: grid;
   justify-content: center;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 10% 90%;
 }
 body main section {
   transition: all;
   transition-duration: 1s;
-  background-color: #292929;
+  background-color: #0d0c0c;
   height: 97vh;
   margin: 10px;
   border-radius: 10px;
@@ -42,14 +100,17 @@ body main section {
 body main section::-webkit-scrollbar {
   width: 10px;
   background-color: #0d0c0c;
+  display: none;
 }
 body main section::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background: #292929;
 }
 body main #menu {
+  border: 1px solid #212121;
+  z-index: 5;
   color: #cfd1d7;
-  background-color: #292929;
+  background-color: #0d0c0c;
 }
 body main #menu .fa-list, body main #menu .fa-xmark {
   display: none;
@@ -65,91 +126,206 @@ body main #menu nav {
   flex-direction: column;
   align-items: center;
 }
+body main #menu nav #login {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+body main #menu nav #login:hover::after {
+  text-align: center;
+  border-radius: 10px;
+  padding: 3px;
+  width: 100px;
+  position: absolute;
+  right: -115px;
+  bottom: 10px;
+  content: "Login";
+  background-color: whitesmoke;
+  color: #0d0c0c;
+  font-size: 16px;
+  font-weight: 600;
+}
+body main #menu nav #plans {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+body main #menu nav #plans:hover::after {
+  text-align: center;
+  border-radius: 10px;
+  padding: 3px;
+  width: 100px;
+  position: absolute;
+  right: -115px;
+  bottom: 10px;
+  content: "Planos";
+  background-color: whitesmoke;
+  color: #0d0c0c;
+  font-size: 16px;
+  font-weight: 600;
+}
+body main #menu nav #aboutUs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+body main #menu nav #aboutUs:hover::after {
+  text-align: center;
+  border-radius: 10px;
+  padding: 3px;
+  width: 100px;
+  position: absolute;
+  right: -115px;
+  bottom: 10px;
+  content: "Sobre nós";
+  background-color: whitesmoke;
+  color: #0d0c0c;
+  font-size: 16px;
+  font-weight: 600;
+}
+body main #menu nav #cart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+body main #menu nav #cart:hover::after {
+  text-align: center;
+  border-radius: 10px;
+  padding: 3px;
+  width: 100px;
+  position: absolute;
+  right: -115px;
+  bottom: 10px;
+  content: "Carrinho";
+  background-color: whitesmoke;
+  color: #0d0c0c;
+  font-size: 16px;
+  font-weight: 600;
+}
+body main #menu nav #contacts {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+body main #menu nav #contacts:hover::after {
+  text-align: center;
+  border-radius: 10px;
+  padding: 3px;
+  width: 100px;
+  position: absolute;
+  right: -115px;
+  bottom: 10px;
+  content: "Contatos";
+  background-color: whitesmoke;
+  color: #0d0c0c;
+  font-size: 16px;
+  font-weight: 600;
+}
 body main #menu nav img {
   width: 50px;
 }
 body main #menu nav div {
   cursor: pointer;
   background-color: #212121;
-  border: 0.5px solid rgba(128, 128, 128, 0.384);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
   border-radius: 20px;
-  width: 100%;
-  min-height: 40px;
+  width: 60px;
+  min-height: 60px;
   padding: 10px;
   margin: 10px 0px;
 }
 body main #menu nav div a {
+  width: 100%;
+  height: 100%;
   color: #cfd1d7;
   display: flex;
+  margin: auto;
   justify-content: space-between;
   align-content: center;
   text-decoration: none;
   min-height: 30px;
 }
 body main #menu nav div i {
+  margin: auto;
   font-size: 30px;
 }
 body main #menu nav div i:active {
   display: none;
 }
 body main #menu nav div:hover {
-  background-color: #038C93;
-}
-body main #menu nav div:hover a {
-  color: #191919;
+  background-color: #007A7E;
 }
 body main #contents {
+  border: 1px solid #212121;
   color: #cfd1d7;
   overflow-y: auto;
   overflow-x: hidden;
+}
+body main #contents a {
+  text-decoration: none;
 }
 body main #contents #apresentation {
   background: url(../../img/painel_top.png);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 5px;
-  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  min-height: 100%;
+  flex-wrap: wrap;
+  background-size: cover;
+  padding: 25px;
+  margin-top: 0px;
+  border-radius: 5px;
+  height: 97vh;
 }
-body main #contents #apresentation h1 {
-  font-size: 70px;
+body main #contents #apresentation div {
+  position: relative;
+  top: -65px;
+  margin: auto;
 }
-body main #contents #apresentation img {
+body main #contents #apresentation .img {
+  margin: auto;
+  text-align: center;
+}
+body main #contents #apresentation .img picture img {
   width: 300px;
 }
-body main #contents #apresentation p {
-  max-width: 500px;
-  margin-left: auto;
+body main #contents #apresentation .text h1 {
+  text-shadow: 0px 0px 10px rgba(46, 45, 45, 0.63);
+  display: flex;
+  font-size: 100px;
+  font-weight: 800;
+  border-left: none;
+  text-align: center;
+  font-family: "fugaz", Courier, monospace;
 }
-body main #contents #apresentation button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background: linear-gradient(to right, #0EC1A4, #1566b3);
-  color: #cfd1d7;
+body main #contents #apresentation .text h3 {
+  text-shadow: 0px 0px 5px rgba(46, 45, 45, 0.63);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-size: 20px;
+  margin: 30px;
+}
+body main #contents #apresentation .text button {
+  box-shadow: 5px 5px 10px rgba(6, 97, 97, 0.5333333333);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
   font-weight: 600;
+  margin: auto;
+  background-color: #0C9999;
+  border: none;
   width: 200px;
-  margin-top: 15px;
-  padding: 10px;
+  height: 45px;
+  border-radius: 50px;
 }
-body main #contents #apresentation button a {
-  text-decoration: none;
+body main #contents #apresentation .text button:hover {
+  background-color: #0b8f8f;
+}
+body main #contents #apresentation .text button a {
   color: #cfd1d7;
-}
-body main #contents #apresentation button i {
-  transition: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  margin-left: 20px;
-}
-body main #contents #apresentation button:hover i {
-  transform: translate(10px);
 }
 
 @media (max-width: 1070px) {
@@ -163,23 +339,35 @@ body main #contents #apresentation button:hover i {
     padding: 8px;
   }
   body main #menu nav div h3 {
-    font-size: 16px;
+    font-size: 13px;
   }
   body main #menu nav div i {
     font-size: 25px;
   }
-  body main #contents #apresentation h1 {
+  body main #contents #apresentation {
+    display: block;
+  }
+  body main #contents #apresentation div {
+    top: -30px;
+  }
+  body main #contents #apresentation .img {
+    margin-top: 25px;
+  }
+  body main #contents #apresentation .img picture img {
+    margin-bottom: 40px;
+  }
+  body main #contents #apresentation .text h1 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
     font-size: 60px;
-  }
-  body main #contents #apresentation img {
-    width: 200px;
-  }
-  body main #contents #apresentation button {
-    font-size: 18px;
-    padding: 8px;
+    border-bottom: none;
   }
 }
 @media (max-width: 798px) {
+  body main {
+    grid-template-columns: 15% 85%;
+  }
   body main section {
     margin: 5px;
   }
@@ -199,28 +387,178 @@ body main #contents #apresentation button:hover i {
     font-size: 25px;
   }
   body main #contents #apresentation {
-    min-height: 100%;
+    display: block;
   }
-  body main #contents #apresentation h1 {
-    font-size: 40px;
+  body main #contents #apresentation .img {
+    margin-top: 25px;
   }
-  body main #contents #apresentation img {
+  body main #contents #apresentation .img picture img {
     width: 200px;
+    height: 200px;
   }
-  body main #contents #apresentation button {
-    font-size: 16px;
-    padding: 8px;
+  body main #contents #apresentation .text h1 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-size: 50px;
+    border-bottom: none;
+  }
+  body main #contents #apresentation .aside_contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin-top: 15px;
+  }
+  body main #contents #apresentation .aside_contacts i {
+    font-size: 30px;
+  }
+  body main #contents #apresentation .aside_contacts #github {
+    position: relative;
+    display: flex;
+  }
+  body main #contents #apresentation .aside_contacts #github:hover::before {
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    width: 65px;
+    position: absolute;
+    left: -20px;
+    bottom: -40px;
+    content: "GitHub";
+    background-color: whitesmoke;
+    color: #0d0c0c;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  body main #contents #apresentation .aside_contacts #linkedin {
+    position: relative;
+    display: flex;
+  }
+  body main #contents #apresentation .aside_contacts #linkedin:hover::before {
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    width: 65px;
+    position: absolute;
+    left: -20px;
+    bottom: -40px;
+    content: "LinkedIn";
+    background-color: whitesmoke;
+    color: #0d0c0c;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  body main #contents #apresentation .aside_contacts #instagram {
+    position: relative;
+    display: flex;
+  }
+  body main #contents #apresentation .aside_contacts #instagram:hover::before {
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    width: 65px;
+    position: absolute;
+    left: -20px;
+    bottom: -40px;
+    content: "Instagram";
+    background-color: whitesmoke;
+    color: #0d0c0c;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  body main #contents #apresentation .aside_contacts #curriculo {
+    position: relative;
+    display: flex;
+  }
+  body main #contents #apresentation .aside_contacts #curriculo:hover::before {
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    width: 65px;
+    position: absolute;
+    left: -20px;
+    bottom: -40px;
+    content: "Currículo";
+    background-color: whitesmoke;
+    color: #0d0c0c;
+    font-size: 13px;
+    font-weight: 600;
   }
 }
 @media (max-width: 598px) {
+  body main {
+    grid-template-columns: 18% 82%;
+  }
   body main #menu nav div {
-    width: 50px;
+    width: 55px;
+    min-height: 55px;
+  }
+  body main #contents #certifications article h3 {
+    display: none;
+  }
+  body main #contents #certifications article h6 {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  body main #contents #certifications article .certifications .certifications_finalling, body main #contents #certifications article .certifications .certifications_progress {
+    justify-content: start;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  body main #contents #certifications article .img picture img {
+    top: 50px;
+    right: -10px;
+    position: absolute;
+  }
+  body main #contents #certifications article .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #contents #certifications article .title i {
+    margin-left: 20px;
+    font-size: 25px;
+    color: #464646;
+    margin-bottom: -10px;
+  }
+  body main #contents #certifications article .title h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  body main #contents #certifications article .img {
+    max-width: 600px;
+    padding: 20px;
+  }
+  body main #contents #certifications article .img picture img {
+    top: -80px;
+    right: -10px;
+    position: absolute;
+  }
+  body main #contents #certifications article .certifications {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+  body main #contents #certifications article .certifications .certifications_finalling, body main #contents #certifications article .certifications .certifications_progress {
+    width: 90%;
+  }
+  body main #contents #certifications article .certifications .certifications_finalling .curse, body main #contents #certifications article .certifications .certifications_progress .curse {
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+    padding: 15px;
   }
 }
 @media (max-width: 415px) {
   body main {
     position: relative;
     display: flex;
+    grid-template-columns: 18% 82%;
   }
   body main section {
     margin: 2px;
@@ -236,6 +574,10 @@ body main #contents #apresentation button:hover i {
     display: flex;
     justify-content: center;
   }
+  body main #menu nav #contacts:hover::after, body main #menu nav #skills:hover::after, body main #menu nav #projects:hover::after, body main #menu nav #certifications:hover::after, body main #menu nav #aboutMe:hover::after {
+    content: "";
+    display: none;
+  }
   body main #menu nav h1 {
     display: none;
   }
@@ -244,7 +586,7 @@ body main #contents #apresentation button:hover i {
     margin-bottom: 10px;
   }
   body main #menu nav div {
-    width: 50px;
+    width: 55px;
     padding: 10px;
   }
   body main #menu nav div h3 {
@@ -258,15 +600,21 @@ body main #contents #apresentation button:hover i {
   body main #contents {
     width: 100%;
   }
-  body main #contents #apresentation h1 {
-    font-size: 30px;
+  body main #contents #skills {
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
-  body main #contents #apresentation img {
-    width: 180px;
+  body main #contents #about_me article {
+    position: relative;
+    margin: auto;
+    max-width: 500px;
   }
-  body main #contents #apresentation button {
-    font-size: 16px;
-    padding: 8px;
+  body main #contents #about_me article picture img {
+    top: 340px;
+    left: 0;
+    position: absolute;
+    max-width: 100%;
   }
 }
 

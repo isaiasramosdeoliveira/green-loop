@@ -15,5 +15,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'no-unused-vars': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'default-case': 'off',
+    'import/prefer-default-export': 'off',
   },
 };

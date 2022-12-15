@@ -1,0 +1,54 @@
+@mixin socialNetworkWeb($rede){
+  &:hover{
+    &::before{
+      text-align: center;
+      border-radius: 10px;
+      padding: 3px;
+      width: 65px;
+      position: absolute;
+      left: -80px;
+      bottom: 5px;
+      content: $rede;
+      background-color: whitesmoke;
+      color: $preto600;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}
+@mixin socialNetworkMenu($rede){
+  &:hover{
+      &::after{
+        text-align: center;
+        border-radius: 10px;
+        padding: 3px;
+        width: 100px;
+        position: absolute;
+        right: -115px;
+        bottom: 10px;
+        content: $rede;
+        background-color: whitesmoke;
+        color: $preto600;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+}
+@mixin socialNetworkMobile($rede){
+  &:hover{
+    &::before{
+      text-align: center;
+      border-radius: 10px;
+      padding: 3px;
+      width: 65px;
+      position: absolute;
+      left: -20px;
+      bottom: -40px;
+      content: $rede;
+      background-color: whitesmoke;
+      color: $preto600;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}

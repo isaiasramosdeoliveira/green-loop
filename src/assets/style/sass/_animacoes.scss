@@ -1,0 +1,53 @@
+@keyframes jump {
+  from{
+    transform: scale(0.8);
+  }
+  to{
+    transform: none;
+  }
+}
+@keyframes move {
+    from{
+        transform: scale(1.02);
+    }
+    to{
+        transform: none;
+    }
+}
+@keyframes apparition{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+// Animações do about
+@mixin jump($value) {
+    @if ($value == true) {
+        animation-name: jump;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-duration: 2000ms;
+    }
+}
+@mixin move($value) {
+    @if ($value == true) {
+        animation-name: move;
+        transition: all;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 3s;
+    }
+}
+@mixin apparition($value) {
+    @if ($value == true) {
+        animation-name: apparition;
+        transition: all;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 1s;
+    }
+}

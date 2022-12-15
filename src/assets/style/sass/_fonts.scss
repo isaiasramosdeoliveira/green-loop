@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "chariss";
+    src: url(../fonts/CharisSIL-Italic.ttf);
+}
+@font-face {
+    font-family: "nunito";
+    src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "fugaz";
+    src: url(../fonts/Fugaz_One/FugazOne-Regular.ttf);
+}
+@font-face {
+  font-family: "great";
+  src: url(../fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
+
+
+@mixin fonte($value){
+    @if ($value == chariss){
+        font-family: 'chariss', Courier, monospace;
+    }
+    @if ($value == nunito){
+        font-family: 'nunito', Courier, monospace;
+    }
+    @if($value == poppis){
+        font-family: "poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    @if($value == "fugaz"){
+        font-family: 'fugaz', Courier, monospace;
+    }
+    @if($value == "great"){
+      font-family: 'great', Courier, monospace;
+  }
+}
