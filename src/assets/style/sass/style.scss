@@ -147,7 +147,124 @@ body{
             text-decoration: none;
           }
           #login{
-            
+            height: 90vh;
+            background: url(../../img/background_login.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            form{
+              display: grid;
+              justify-content: center;
+              margin: auto;
+              border: 1px solid $preto300;
+              backdrop-filter: blur(2px);
+              padding: 60px;
+              border-radius: 10px;
+              label{
+                font-size: 20px;
+                font-weight: 600;
+                color: $preto100;
+              }
+              input{
+                border:none;
+                width: 250px;
+                font-size: 18px;
+                height: 35px;
+                padding: 5px;
+              }
+              small{
+                a{
+                  text-decoration: none;
+                  color: $corPrimary2;
+                }
+              }
+            }
+            button{
+              padding: 10px;
+              cursor: pointer;
+              border: none;
+              font-size: 18px;
+              width: 250px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-weight: 600;
+              text-transform: uppercase;
+              background-color: #029790;
+              color: #f6fcfb;
+              &:hover{
+                background-color: #018079;
+              }
+            }
+          }
+          #plans{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .card{
+              position: relative;
+              background-color: $preto400;
+              margin: 20px;
+              width: 300px;
+              height: 350px;
+              padding: 30px;
+              border: 1px solid $preto300;
+              border-radius: 10px;
+              div{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                img{
+                  margin: auto;
+                  width: 200px;
+                }
+                h2{
+                  margin: auto;
+                  margin-top: -25px;
+                }
+              }
+              small{
+                display: flex;
+                justify-content: center;
+              }
+              h4{
+                position: absolute;
+                top: -20px;
+                left: -20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $corPrimary3;
+                border-radius: 200%;
+                width: 65px;
+                height: 65px;
+                color: $corPrimary5;
+                font-weight: 600;
+                border: 3px solid $corPrimary5;
+              }
+              button{
+                position: absolute;
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                font-size: 16px;
+                width: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
+                text-transform: uppercase;
+                background-color: #029790;
+                bottom: 20px;
+                color: #f6fcfb;
+                &:hover{
+                  background-color: #018079;
+                }
+              }
+            }
           }
           #apresentation{
             background:url(../../img/painel_top.png);
@@ -161,10 +278,9 @@ body{
             padding: 25px;
             margin-top: 0px;
             border-radius: 5px;
-            height: 97vh;
+            height: 95vh;
             div{
               position: relative;
-              top: -65px;
               margin: auto;
 
             }
@@ -194,6 +310,11 @@ body{
                 margin: auto;
                 font-size: 20px;
                 margin: 30px;
+              }
+              p{
+                display: flex;
+                margin: auto;
+                max-width: 500px;
               }
               button{
                 box-shadow: 5px 5px 10px #06616188;
@@ -500,7 +621,7 @@ body{
           justify-content: center;
         }
         nav{
-          #contacts, #skills, #projects, #certifications, #aboutMe{
+          #login, #plans, #aboutUs, #cart, #contacts{
             &:hover{
               &::after{
                 content: '';
@@ -538,22 +659,6 @@ body{
           justify-content: center;
           align-items: center;
         }
-        #about_me{
-          article{
-            position: relative;
-            margin: auto;
-            max-width: 500px;
-            picture{
-              img{
-                top: 340px;
-                left: 0;
-                position: absolute;
-                max-width: 100%;
-              }
-            }
-          }
-        }
-
       }
     }
   }

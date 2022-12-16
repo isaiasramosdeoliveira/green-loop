@@ -264,6 +264,124 @@ body main #contents {
 body main #contents a {
   text-decoration: none;
 }
+body main #contents #login {
+  height: 90vh;
+  background: url(../../img/background_login.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+}
+body main #contents #login form {
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  border: 1px solid #212121;
+  backdrop-filter: blur(2px);
+  padding: 60px;
+  border-radius: 10px;
+}
+body main #contents #login form label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #464646;
+}
+body main #contents #login form input {
+  border: none;
+  width: 250px;
+  font-size: 18px;
+  height: 35px;
+  padding: 5px;
+}
+body main #contents #login form small a {
+  text-decoration: none;
+  color: #007A7E;
+}
+body main #contents #login button {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #029790;
+  color: #f6fcfb;
+}
+body main #contents #login button:hover {
+  background-color: #018079;
+}
+body main #contents #plans {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body main #contents #plans .card {
+  position: relative;
+  background-color: #191919;
+  margin: 20px;
+  width: 300px;
+  height: 350px;
+  padding: 30px;
+  border: 1px solid #212121;
+  border-radius: 10px;
+}
+body main #contents #plans .card div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+body main #contents #plans .card div img {
+  margin: auto;
+  width: 200px;
+}
+body main #contents #plans .card div h2 {
+  margin: auto;
+  margin-top: -25px;
+}
+body main #contents #plans .card small {
+  display: flex;
+  justify-content: center;
+}
+body main #contents #plans .card h4 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #038C93;
+  border-radius: 200%;
+  width: 65px;
+  height: 65px;
+  color: #024d50;
+  font-weight: 600;
+  border: 3px solid #024d50;
+}
+body main #contents #plans .card button {
+  position: absolute;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #029790;
+  bottom: 20px;
+  color: #f6fcfb;
+}
+body main #contents #plans .card button:hover {
+  background-color: #018079;
+}
 body main #contents #apresentation {
   background: url(../../img/painel_top.png);
   background-repeat: no-repeat;
@@ -276,11 +394,10 @@ body main #contents #apresentation {
   padding: 25px;
   margin-top: 0px;
   border-radius: 5px;
-  height: 97vh;
+  height: 95vh;
 }
 body main #contents #apresentation div {
   position: relative;
-  top: -65px;
   margin: auto;
 }
 body main #contents #apresentation .img {
@@ -306,6 +423,11 @@ body main #contents #apresentation .text h3 {
   margin: auto;
   font-size: 20px;
   margin: 30px;
+}
+body main #contents #apresentation .text p {
+  display: flex;
+  margin: auto;
+  max-width: 500px;
 }
 body main #contents #apresentation .text button {
   box-shadow: 5px 5px 10px rgba(6, 97, 97, 0.5333333333);
@@ -574,7 +696,7 @@ body main #contents #apresentation .text button a {
     display: flex;
     justify-content: center;
   }
-  body main #menu nav #contacts:hover::after, body main #menu nav #skills:hover::after, body main #menu nav #projects:hover::after, body main #menu nav #certifications:hover::after, body main #menu nav #aboutMe:hover::after {
+  body main #menu nav #login:hover::after, body main #menu nav #plans:hover::after, body main #menu nav #aboutUs:hover::after, body main #menu nav #cart:hover::after, body main #menu nav #contacts:hover::after {
     content: "";
     display: none;
   }
@@ -604,17 +726,6 @@ body main #contents #apresentation .text button a {
     display: grid;
     justify-content: center;
     align-items: center;
-  }
-  body main #contents #about_me article {
-    position: relative;
-    margin: auto;
-    max-width: 500px;
-  }
-  body main #contents #about_me article picture img {
-    top: 340px;
-    left: 0;
-    position: absolute;
-    max-width: 100%;
   }
 }
 
