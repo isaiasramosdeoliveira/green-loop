@@ -99,9 +99,32 @@ export const login = `
 </section>
 `;
 export const aboutUs = `
-  <section id="aboutUs">
-
-  </section>
+<section id="aboutUs">
+<div class="block_1">
+  <picture>
+    <img src="src/assets/img/block_1.png" alt="">
+  </picture>
+  <div class="text">
+    <h2>Nossos serviços</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta voluptatum saepe amet vero labore quae facilis, iusto doloremque sed id adipisci, nulla provident ex animi culpa officia nemo, sunt voluptates!</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut vel ad expedita corrupti odio, voluptates veniam quaerat. Laborum esse quod odio, porro rerum dolorem. Quod velit earum delectus dolor odio!</p>
+  </div>
+</div>
+<br>
+<br>
+<div class="block_2">
+  <div class="text">
+    <h2>Meio de plantio</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta voluptatum saepe amet vero labore quae facilis, iusto doloremque sed id adipisci, nulla provident ex animi culpa officia nemo, sunt voluptates!</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut vel ad expedita corrupti odio, voluptates veniam quaerat. Laborum esse quod odio, porro rerum dolorem. Quod velit earum delectus dolor odio!</p>
+  </div>
+  <picture>
+    <img src="src/assets/img/block_2.png" alt="">
+  </picture>
+</div>
+</section>
 `;
 
 export const cart = `

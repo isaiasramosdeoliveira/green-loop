@@ -126,6 +126,9 @@ body main #menu nav {
   flex-direction: column;
   align-items: center;
 }
+body main #menu nav h1 {
+  font-size: 15px;
+}
 body main #menu nav #login {
   position: relative;
   display: flex;
@@ -264,6 +267,73 @@ body main #contents {
 body main #contents a {
   text-decoration: none;
 }
+body main #contents #cart {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body main #contents #cart input {
+  border: none;
+  width: 250px;
+  font-size: 18px;
+  height: 45px;
+  padding: 5px;
+}
+body main #contents #cart picture img {
+  width: 180px;
+}
+body main #contents #cart button {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #029790;
+  color: #f6fcfb;
+}
+body main #contents #cart button:hover {
+  background-color: #018079;
+}
+body main #contents #cart .options, body main #contents #cart .products {
+  margin: 5px;
+  padding: 20px;
+}
+body main #contents #cart .options button, body main #contents #cart .options input, body main #contents #cart .products button, body main #contents #cart .products input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+body main #contents #cart .options {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  background-color: #007A7E;
+}
+body main #contents #cart .options .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body main #contents #cart .options .menu .coupon, body main #contents #cart .options .menu .total {
+  padding: 20px;
+}
+body main #contents #cart .products {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: #191919;
+  margin-top: 20px;
+}
+body main #contents #cart .products .product {
+  text-align: center;
+  color: #464646;
+}
 body main #contents #login {
   height: 90vh;
   background: url(../../img/background_login.png);
@@ -314,6 +384,18 @@ body main #contents #login button {
 }
 body main #contents #login button:hover {
   background-color: #018079;
+}
+body main #contents #aboutUs .block_1, body main #contents #aboutUs .block_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main #contents #aboutUs .block_1 picture img, body main #contents #aboutUs .block_2 picture img {
+  width: 380px;
+}
+body main #contents #aboutUs .block_1 .text, body main #contents #aboutUs .block_2 .text {
+  max-width: 545px;
 }
 body main #contents #plans {
   height: 90vh;
