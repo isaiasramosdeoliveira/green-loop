@@ -4,74 +4,104 @@ export const loader = `
 
 export const plans = `
 <section id="plans">
-<div class="card">
-  <h4>1 x 6</h4>
-  <small>Local da plantação:</small>
-  <div>
-    <picture>
-      <img src="src/assets/img/plans_1x1.png" alt="Plano">
-    </picture>
-    <h2>R$200.00</h2>
-  </div>
-  <button>Contratar serviços</button>
-</div>
-<div class="card">
-  <h4>2 x 6</h4>
-  <small>Local da plantação:</small>
-  <div>
-    <picture>
-      <img src="src/assets/img/plans_1x2.png" alt="Plano">
-    </picture>
-    <h2>R$400.00</h2>
-  </div>
-  <button>Contratar serviços</button>
-</div>
-<div class="card">
-  <h4>3 x 6</h4>
-  <small>Local da plantação:</small>
-  <div>
-    <picture>
-      <img src="src/assets/img/plans_1x3.png" alt="Plano">
-    </picture>
-    <h2>R$650.00</h2>
-  </div>
-  <button>Contratar serviços</button>
-</div>
-<div class="card">
-  <h4>4 x 6</h4>
-  <small>Local da plantação:</small>
-  <div>
-    <picture>
-      <img src="src/assets/img/plans_1x4.png" alt="Plano">
-    </picture>
-    <h2>R$800.00</h2>
-  </div>
-  <button>Contratar serviços</button>
-</div>
-<div class="card">
-  <h4>5 x 6</h4>
-  <small>Local da plantação:</small>
-  <div>
-    <picture>
-      <img src="src/assets/img/plans_1x5.png" alt="Plano">
-    </picture>
-    <h2>R$950.00</h2>
-  </div>
-  <button>Contratar serviços</button>
-</div>
-<div class="card">
-  <h4>6 x 6</h4>
-  <small>Local da plantação:</small>
-  <div>
-    <picture>
-      <img src="src/assets/img/plans_1x6.png" alt="Plano">
-    </picture>
-    <h2>R$1450.00</h2>
-  </div>
-  <button>Contratar serviços</button>
-</div>
-</section>
-</section>
+            <div class="card">
+              <h4>1 x 6</h4>
+              <small>Local da plantação:</small>
+              <div>
+                <div class="img">
+                  <picture>
+                    <img src="src/assets/img/plans_1x1.png" alt="Plano">
+                  </picture>
+                </div>
+                <div class="text">
+                  <h3>R$150.00</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <button>Contratar serviços</button>
+            </div>
+            <div class="card">
+              <h4>2 x 6</h4>
+              <small>Local da plantação:</small>
+              <div>
+                <div class="img">
+                  <picture>
+                    <img src="src/assets/img/plans_1x2.png" alt="Plano">
+                  </picture>
+                </div>
+                <div class="text">
+                  <h3>R$200.00</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <button>Contratar serviços</button>
+            </div>
+            <div class="card">
+              <h4>3 x 6</h4>
+              <small>Local da plantação:</small>
+              <div>
+                <div class="img">
+                  <picture>
+                    <img src="src/assets/img/plans_1x3.png" alt="Plano">
+                  </picture>
+                </div>
+                <div class="text">
+                  <h3>R$550.00</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <button>Contratar serviços</button>
+            </div>
+            <div class="card">
+              <h4>4 x 6</h4>
+              <small>Local da plantação:</small>
+              <div>
+                <div class="img">
+                  <picture>
+                    <img src="src/assets/img/plans_1x4.png" alt="Plano">
+                  </picture>
+                </div>
+                <div class="text">
+                  <h3>R$790.00</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <button>Contratar serviços</button>
+            </div>
+            <div class="card">
+              <h4>5 x 6</h4>
+              <small>Local da plantação:</small>
+              <div>
+                <div class="img">
+                  <picture>
+                    <img src="src/assets/img/plans_1x5.png" alt="Plano">
+                  </picture>
+                </div>
+                <div class="text">
+                  <h3>R$990.00</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <button>Contratar serviços</button>
+            </div>
+            <div class="card">
+              <h4>6 x 6</h4>
+              <small>Local da plantação:</small>
+              <div>
+                <div class="img">
+                  <picture>
+                  <img src="src/assets/img/plans_1x6.png" alt="Plano">
+                </picture>
+                </div>
+                <div class="text">
+                  <h3>R$1450.00</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <button>Contratar serviços</button>
+            </div>
+            </section>
+          </section>
 `;
 
 export const login = `
@@ -128,9 +158,35 @@ export const aboutUs = `
 `;
 
 export const cart = `
-  <section id="cart">
-
-  </section>
+<section id="cart">
+<div class="options">
+  <div class="menu">
+    <div class="coupon">
+      <h2>Cupom</h2>
+      <p>Insira seu cumpom promocional.</p>
+      <form action="">
+        <input type="text" name="cupom" id="cupom" placeholder="Cumpom">
+        <br>
+        <button>Inserir</button>
+      </form>
+    </div>
+    <div class="total">
+      <h2>Total a pagar:</h2>
+      <p>R$<span class="value">00.00</span></p>
+    </div>
+  </div>
+  <div class="products">
+    <div class="product">
+      <p>Carrinho vazio</p>
+      <br>
+      <picture class="img_product">
+        <img src="src/assets/img/empty.png" alt="vzaio">
+      </picture>
+    </div>
+  </div>
+  <button>Finalizar</button>
+</div>
+</section>
 `;
 
 export const contacts = `

@@ -40,9 +40,7 @@ body{
         transition: all;
         transition-duration: 1s;
         background-color: $preto600;
-        height: 97vh;
-        margin: 10px;
-        border-radius: 10px;
+        height: 100vh;
         padding: 10px;
         &::-webkit-scrollbar{
           width: 10px;
@@ -129,6 +127,7 @@ body{
                     padding: 10px;
                     margin: 10px 0px;
                     i{
+                      color: $preto100;
                       margin: auto;
                       font-size: 30px;
                       &:active{
@@ -136,6 +135,9 @@ body{
                       }
                     }
                     &:hover{
+                      i{
+                        color: $brancoLetra;
+                      }
                       background-color: $corPrimary2;
                     }
                 }
@@ -149,6 +151,9 @@ body{
           a{
             text-decoration: none;
           }
+            #cart, #login, #aboutUs, #plans, #apresentation{
+              height: 98vh;
+            }
           #cart{
             display: flex;
             justify-content: center;
@@ -219,7 +224,6 @@ body{
             }
           }
           #login{
-            height: 90vh;
             background: url(../../img/background_login.png);
             background-repeat: no-repeat;
             background-size: cover;
@@ -288,7 +292,6 @@ body{
             }
           }
           #plans{
-            height: 90vh;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -302,16 +305,31 @@ body{
               border: 1px solid $preto300;
               border-radius: 10px;
               div{
-                display: grid;
+                position: relative;
+                bottom: -15px;
+                display: flex;
                 justify-content: center;
-                align-items: center;
-                img{
-                  margin: auto;
-                  width: 200px;
+                picture{
+                  img{
+                    width: 150px;
+                    margin-left: -25px;
+                  }
                 }
-                h2{
+                .img{
+                  img{
+                    width: 150px;
+
+                  }
+                }
+                .text{
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: start;
                   margin: auto;
-                  margin-top: -25px;
+                  p{
+                    font-size: 14px;
+                    margin-top: 10px;
+                  }
                 }
               }
               small{
@@ -399,7 +417,7 @@ body{
                 font-size: 20px;
                 margin: 30px;
               }
-              p{
+              p, h4{
                 display: flex;
                 margin: auto;
                 max-width: 500px;
@@ -701,6 +719,7 @@ body{
         position: absolute;
         right: 0;
         height: 50px;
+        border-radius: 0px 0px 10px 10px;
 
         overflow: hidden;
         .fa-list, .fa-xmark{

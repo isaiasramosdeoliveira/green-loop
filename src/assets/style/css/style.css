@@ -92,9 +92,7 @@ body main section {
   transition: all;
   transition-duration: 1s;
   background-color: #0d0c0c;
-  height: 97vh;
-  margin: 10px;
-  border-radius: 10px;
+  height: 100vh;
   padding: 10px;
 }
 body main section::-webkit-scrollbar {
@@ -249,6 +247,7 @@ body main #menu nav div a {
   min-height: 30px;
 }
 body main #menu nav div i {
+  color: #464646;
   margin: auto;
   font-size: 30px;
 }
@@ -258,6 +257,9 @@ body main #menu nav div i:active {
 body main #menu nav div:hover {
   background-color: #007A7E;
 }
+body main #menu nav div:hover i {
+  color: #cfd1d7;
+}
 body main #contents {
   border: 1px solid #212121;
   color: #cfd1d7;
@@ -266,6 +268,9 @@ body main #contents {
 }
 body main #contents a {
   text-decoration: none;
+}
+body main #contents #cart, body main #contents #login, body main #contents #aboutUs, body main #contents #plans, body main #contents #apresentation {
+  height: 98vh;
 }
 body main #contents #cart {
   display: flex;
@@ -335,7 +340,6 @@ body main #contents #cart .products .product {
   color: #464646;
 }
 body main #contents #login {
-  height: 90vh;
   background: url(../../img/background_login.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -398,7 +402,6 @@ body main #contents #aboutUs .block_1 .text, body main #contents #aboutUs .block
   max-width: 545px;
 }
 body main #contents #plans {
-  height: 90vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -414,17 +417,27 @@ body main #contents #plans .card {
   border-radius: 10px;
 }
 body main #contents #plans .card div {
-  display: grid;
+  position: relative;
+  bottom: -15px;
+  display: flex;
   justify-content: center;
-  align-items: center;
 }
-body main #contents #plans .card div img {
-  margin: auto;
-  width: 200px;
+body main #contents #plans .card div picture img {
+  width: 150px;
+  margin-left: -25px;
 }
-body main #contents #plans .card div h2 {
+body main #contents #plans .card div .img img {
+  width: 150px;
+}
+body main #contents #plans .card div .text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
   margin: auto;
-  margin-top: -25px;
+}
+body main #contents #plans .card div .text p {
+  font-size: 14px;
+  margin-top: 10px;
 }
 body main #contents #plans .card small {
   display: flex;
@@ -506,7 +519,7 @@ body main #contents #apresentation .text h3 {
   font-size: 20px;
   margin: 30px;
 }
-body main #contents #apresentation .text p {
+body main #contents #apresentation .text p, body main #contents #apresentation .text h4 {
   display: flex;
   margin: auto;
   max-width: 500px;
@@ -771,6 +784,7 @@ body main #contents #apresentation .text button a {
     position: absolute;
     right: 0;
     height: 50px;
+    border-radius: 0px 0px 10px 10px;
     overflow: hidden;
   }
   body main #menu .fa-list, body main #menu .fa-xmark {
